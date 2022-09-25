@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        width: 100%;
+      }
+      html {
+        box-sizing: border-box;
+      }
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+      .container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      .panel_container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+      }
+      .panel_one {
+        position: relative;
+        width: 40%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+      .panel_one_image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+      .panel_two {
+        position: relative;
+        width: 60%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background-image: url('assets/hero_background__c0w6qmrgcnqu_large.png');
+      }
+      .panel_content {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 4vh;
+      }
+      .logo {
+        position: relative;
+        max-height: 20vh;
+        max-width: 80%;
+        width: auto;
+        object-fit: contain;
+      }
+      .headline {
+        position: relative;
+        height: 24%;
+        max-width: 90%;
+        width: auto;
+        object-fit: contain;
+        margin-bottom: 5%;
+      }
+      .cta {
+        position: relative;
+        height: 12vh;
+        max-width: 60%;
+        width: auto;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="panel_container">
+        <div class="panel_one">
+          <img class="panel_one_image" src="./assets/f1_img.jpg" />
+        </div>
+        <div class="panel_two">
+          <div class="panel_content">
+            <img class="logo" src="./assets/advance_logo_white.svg" />
+            <img class="headine" src="./assets/headline.png" />
+            <img class="cta" src="./assets/cta.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
