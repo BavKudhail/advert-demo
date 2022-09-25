@@ -32,17 +32,28 @@
         opacity: 0.5;
       }
       .container_left {
-        position: relative;
         display: flex;
         flex-direction: column;
-        height: 100%;
         width: 40%;
+        height: 100%;
+        background-color: black;
       }
       .left_img {
+        object-fit: cover;
+
+        background-color: black;
+        height: 100vh;
+      }
+      .testClass {
         position: fixed;
+        width: 40%;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+
+      .left_img_2 {
         object-fit: cover;
         height: 100vh;
-        width: 40%;
+        width: 100%;
       }
       .company_info {
         display: flex;
@@ -61,16 +72,33 @@
         max-width: 80%;
       }
       .company_cta {
-        max-width: 60%;
+        max-width: 40%;
       }
     </style>
     <script src="https://macro.adnami.io/macro/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script>
+      // if user scrolls down a certain percentage
+      let backgroundImage = document.getElementsByClassName('left_img');
+      console.log(backgroundImage);
+
+      window.addEventListener('scroll', (event) => {
+        let scroll = this.scrollY;
+        console.log(scroll);
+        if (scroll > 555) {
+          backgroundImage[0].classList.remove('testClass');
+        } else {
+          backgroundImage[0].classList.add('testClass');
+        }
+      });
+      // make the imager scrollable
+    </script>
   </head>
   <body>
     <div class="container">
       <div class="container_left">
-        <img class="left_img" src="./assets/f1_img.jpg" />
-        <!-- <img class="left_img" src="./assets/f2_img.jpg" /> -->
+        <img class="left_img testClass" src="./assets/f1_img.jpg" />
+        <img class="left_img_2" src="./assets/f2_img.jpg" />
+        <
       </div>
       <div class="container_right">
         <video autoplay muted loop class="container_video">
