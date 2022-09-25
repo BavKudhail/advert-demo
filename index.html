@@ -6,101 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-        height: 100vh;
-        width: 100%;
-      }
       html {
         box-sizing: border-box;
       }
-      *,
-      *:before,
-      *:after {
-        box-sizing: inherit;
+      body {
+        margin: 0;
+        padding: 0;
       }
       .container {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-      }
-      .panel_container {
-        position: absolute;
-        width: 100%;
-        height: 100%;
         display: flex;
-        flex-direction: row;
-      }
-      .panel_one {
-        position: relative;
-        width: 40%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-      }
-      .panel_one_image {
-        height: 100%;
         width: 100%;
-        object-fit: cover;
+        height: 100vh;
       }
-      .panel_two {
-        position: relative;
+      .container_right {
+        background-image: url('assets/hero_background__c0w6qmrgcnqu_large.png');
         width: 60%;
         height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        background-image: url('assets/hero_background__c0w6qmrgcnqu_large.png');
       }
-      .panel_content {
-        position: absolute;
+      .container_left {
+        height: 100%;
+        width: 40%;
+      }
+      .left_img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
+      .company_info {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
+        height: 100%;
         flex-direction: column;
-        gap: 4vh;
+        justify-content: center;
+        align-items: center;
+        width: auto;
       }
-      .logo {
-        position: relative;
-        max-height: 20vh;
+      .company_logo {
+        max-width: 30%;
+      }
+      .company_headline {
+        margin: 50px 0px;
         max-width: 80%;
-        width: auto;
-        object-fit: contain;
       }
-      .headline {
-        position: relative;
-        height: 24%;
-        max-width: 90%;
-        width: auto;
-        object-fit: contain;
-        margin-bottom: 5%;
-      }
-      .cta {
-        position: relative;
-        height: 12vh;
-        max-width: 60%;
-        width: auto;
-        object-fit: contain;
+      .company_cta {
+        max-width: 50%;
       }
     </style>
+    <script src="https://macro.adnami.io/macro/libs/gsap/3.10.4/gsap.min.js"></script>
   </head>
   <body>
     <div class="container">
-      <div class="panel_container">
-        <div class="panel_one">
-          <img class="panel_one_image" src="./assets/f1_img.jpg" />
-        </div>
-        <div class="panel_two">
-          <div class="panel_content">
-            <img class="logo" src="./assets/advance_logo_white.svg" />
-            <img class="headine" src="./assets/headline.png" />
-            <img class="cta" src="./assets/cta.png" />
-          </div>
+      <div class="container_left">
+        <img class="left_img" src="./assets/f1_img.jpg" />
+      </div>
+      <div class="container_right">
+        <div class="company_info">
+          <img src="./assets/advance_logo_white.svg" class="company_logo" />
+          <img src="./assets/headline.png" class="company_headline" />
+          <img src="./assets/cta.png" class="company_cta" />
         </div>
       </div>
     </div>
